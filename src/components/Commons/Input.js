@@ -54,7 +54,7 @@ const FinancialInputField = (props) => {
 		if (props.helperText) {
 			return props.helperText;
 		}
-	}, [helperText, meta]);
+	}, [meta.error, meta.touched, props.helperText]);
 
 	return (
 		<TextField
@@ -74,7 +74,37 @@ const FinancialInputField = (props) => {
 	)
 }
 
+const Input= (props) => {
+  const [field, meta, helpers] = useField({ name: props.name });
+  const { helperText } = props;
+
+	const getHelperText = useCallback(() => {
+		if (Boolean(meta.touched) && Boolean(meta.error)) {
+			return meta.error;
+		}
+
+		if (props.helperText) {
+			return props.helperText;
+		}
+	}, [meta.error, meta.touched, props.helperText]);
+
+	return (
+		<TextField
+      {...props}
+      {...field}
+      label={props.label}
+      name={props.name}
+      id={props.id}
+      variant="outlined"
+      color={props.color}        
+      error={Boolean(meta.touched) && Boolean(meta.error)}
+      helperText={getHelperText()}
+    />
+	)
+}
+
 
 export default {
 	FinancialInputField: React.memo(FinancialInputField),
+  Input: React.memo(Input),
 };

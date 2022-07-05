@@ -63,7 +63,7 @@ export default function Simulador() {
         >
           {
             ({ setFieldValue, handleSubmit, values }) => (
-              <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: '1rem', marginTop: '1.5rem' }}>                  
+              <form onSubmit={handleSubmit} noValidate style={{ display: "flex", flexDirection: "column", gap: '1rem', marginTop: '1.5rem' }}>                  
                 <Input.FinancialInputField
                   name='saldo'
                   id="saldo"
