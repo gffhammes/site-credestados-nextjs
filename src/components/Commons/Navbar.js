@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { useRouter } from "next/router";
 import { Button } from './Button';
 import { useIsMobile } from '../../utils/hooks/useIsMobile';
@@ -16,19 +16,22 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  // window.addEventListener("scroll", showMenuShadowOnScroll);
+  useEffect(() => {
+    window.addEventListener("scroll", showMenuShadowOnScroll);
+  }, [])
 
-  // function showMenuShadowOnScroll() { 
-  //   const distanceY = window.pageYOffset || document.documentElement.scrollTop,
-  //   shrinkOn = 50,
-  //   navElement = document.getElementById("navbar");
 
-  //   if (distanceY > shrinkOn) {
-  //     navElement.classList.add("shadow-3");
-  //   } else {
-  //     navElement.classList.remove("shadow-3");
-  //   }
-  // };
+  function showMenuShadowOnScroll() { 
+    const distanceY = window.pageYOffset || document.documentElement.scrollTop,
+    shrinkOn = 50,
+    navElement = document.getElementById("navbar");
+
+    if (distanceY > shrinkOn) {
+      navElement.classList.add("shadow-3");
+    } else {
+      navElement.classList.remove("shadow-3");
+    }
+  };
 
   return (
     <>
