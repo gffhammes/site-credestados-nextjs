@@ -15,6 +15,12 @@ const AuxilioBrasilForm = () => {
       errors.name = 'Obrigatório';
     }
 
+    if (values.phone.length < 10) {
+      errors.phone = 'O telefone deve ter pelo menos 10 dígitos';
+    } else if (values.phone.length > 11) {
+      errors.phone = 'O telefone deve ter no máximo 11 dígitos';
+    }
+
     if (!values.phone) {
       errors.phone = 'Obrigatório';
     }
