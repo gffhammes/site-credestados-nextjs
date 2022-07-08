@@ -11,20 +11,6 @@ function Footer() {
 
   const isScrollAtBottom = typeof window !== 'undefined' && window?.innerHeight + scroll >= document?.body.offsetHeight;
   const showWhatsappButton = scroll > 50 && !isScrollAtBottom;
-  
-
-  // function showWhatsappButton() {
-  //   const distanceY = window.pageYOffset || document.documentElement.scrollTop,
-  //   showOn = 50,
-  //   isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight,
-  //   buttonElement = document.getElementById("whatsapp-icon");
-
-  //   if ((distanceY > showOn) && !isAtBottom) {
-  //     buttonElement.classList.add("display");
-  //   } else {
-  //     buttonElement.classList.remove("display");
-  //   }
-  // };
 
   return (
     <footer className='bg--light-grey'>

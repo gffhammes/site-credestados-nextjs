@@ -4,38 +4,23 @@ import { useRouter } from "next/router";
 import { Button } from './Button';
 import { useIsMobile } from '../../utils/hooks/useIsMobile';
 import { getWhatsappByRoute } from '../../utils/whatsappConfig';
+import { useScroll } from '../../hooks/useScroll';
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const router = useRouter();
   const { pathname } = router;
   const whatsapp = getWhatsappByRoute(pathname);
-
   const isMobile = useIsMobile();
+  const scroll = useScroll()
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-
-  useEffect(() => {
-    window.addEventListener("scroll", showMenuShadowOnScroll);
-  }, [])
-
-
-  function showMenuShadowOnScroll() { 
-    const distanceY = window.pageYOffset || document.documentElement.scrollTop,
-    shrinkOn = 50,
-    navElement = document.getElementById("navbar");
-
-    if (distanceY > shrinkOn) {
-      navElement.classList.add("shadow-3");
-    } else {
-      navElement.classList.remove("shadow-3");
-    }
-  };
+  const showMenuShadow = scroll > 50;
 
   return (
     <>
-      <nav className="navbar" id='navbar'>
+      <nav className={`${showMenuShadow ? 'shadow-3' : ''} navbar`} id='navbar'>
         <div className="navbar-container container" >
           <div onClick={closeMobileMenu}  className='navbar-logo' >            
             <Link
