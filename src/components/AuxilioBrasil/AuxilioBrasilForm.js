@@ -46,7 +46,7 @@ const AuxilioBrasilForm = () => {
       >
         <Form noValidate>
           <Stack spacing={3} >
-            <Typography variant='h6' sx={{ color: '#363636b0' }}>Insira seus dados para entrar na fila de espera</Typography>
+            <Typography variant='h6' sx={{ color: '#363636b0' }}>Insira seus dados e fale agora com um de nossos consultores</Typography>
             <Input.Input
               name='name'
               id="name"
