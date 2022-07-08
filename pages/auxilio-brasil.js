@@ -6,6 +6,7 @@ const bulletPoints = [
   'Garanta já o seu consignado com as <strong>melhores taxas</strong> do mercado',
   'Valor liberado em sua conta',
   'Parcelas descontadas diretamente do seu beneficio, sem necessidade de <strong>nenhum pagamento de boleto</strong>',
+  'Contratação digital, <strong>100% segura</strong>'
 ]
 
 export default function AuxilioBrasil() {
