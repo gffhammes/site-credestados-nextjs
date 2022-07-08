@@ -2,6 +2,12 @@ import { Box, Container, Stack, Typography } from '@mui/material'
 import Head from 'next/head'
 import AuxilioBrasilForm from '../src/components/AuxilioBrasil/AuxilioBrasilForm'
 
+const bulletPoints = [
+  'Garanta já o seu consignado com as <strong>melhores taxas</strong> do mercado',
+  'Valor liberado em sua conta',
+  'Parcelas descontadas diretamente do seu beneficio, sem necessidade de <strong>nenhum pagamento de boleto</strong>',
+]
+
 export default function AuxilioBrasil() {
   return (
     <>
@@ -30,10 +36,15 @@ export default function AuxilioBrasil() {
           <Stack direction={{ xs: 'column', md: 'row' }} sx={{ m: 'auto', py: 10 }} alignItems='center' spacing={{ xs: 5, lg: 15 }}>            
             <Stack spacing={3} sx={{ color: 'white' }}>
               <Typography  sx={{ maxWidth: { xs: '35ch', md: '30ch' } }} variant='h1' fontSize={{ xs: '1.5rem', md: '2rem'}} fontWeight={700}>Empréstimo Consignado <strong style={{ color: 'var(--primary)', fontSize: '4rem' }}>AUXÍLIO BRASIL</strong></Typography>
-              <Stack sx={{ maxWidth: '40ch'}} spacing={2}>              
-                <Typography fontSize={18}>Informe seus dados e entre para a fila de espera do <strong>Empréstimo Auxílio Brasil</strong></Typography>
-                <Typography fontSize={18}>Empréstimos de até <strong>R$ 3 mil</strong></Typography>
-                <Typography fontSize={18}><strong>Parcelas descontadas</strong> diretamente do Auxílio Brasil</Typography>
+              <Stack sx={{ maxWidth: '60ch'}} spacing={2}>   
+                {bulletPoints.map(item => {
+                  return (
+                    <Stack direction='row' key={item} spacing={1}>
+                      <Typography fontSize={18}>✅</Typography>
+                      <Typography fontSize={18} dangerouslySetInnerHTML={{ __html: item }} />
+                    </Stack>
+                  )
+                })}
               </Stack>
             </Stack>
             <AuxilioBrasilForm />
