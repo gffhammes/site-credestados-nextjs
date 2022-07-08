@@ -2,12 +2,16 @@ import React from 'react';
 import Link from 'next/link'
 import { getWhatsappByRoute } from '../../utils/whatsappConfig';
 import { useRouter } from 'next/router';
+import { useScroll } from '../../hooks/useScroll';
 
 function Footer() {
   const { pathname } = useRouter();
   const whatsapp = getWhatsappByRoute(pathname);
+  const scroll = useScroll()
 
-  // window.addEventListener("scroll", showWhatsappButton);
+  const isScrollAtBottom = typeof window !== 'undefined' && window?.innerHeight + scroll >= document?.body.offsetHeight;
+  const showWhatsappButton = scroll > 50 && !isScrollAtBottom;
+  
 
   // function showWhatsappButton() {
   //   const distanceY = window.pageYOffset || document.documentElement.scrollTop,
@@ -24,7 +28,7 @@ function Footer() {
 
   return (
     <footer className='bg--light-grey'>
-      <a target='_blank' href={`https://wa.me/55${whatsapp}`} id="whatsapp-icon" className='shadow-2' rel="noreferrer">
+      <a target='_blank' href={`https://wa.me/55${whatsapp}`} id="whatsapp-icon" className={`${showWhatsappButton && 'display'} shadow-2`} rel="noreferrer">
         <i className="fab fa-whatsapp"></i>
       </a>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3555.537323684257!2d-48.64222938440911!3d-26.981547502578376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d8cb8aa79ba3c9%3A0x581d0da1d710c19f!2sCred%20Estados%20Empr%C3%A9stimos%20Consignados!5e0!3m2!1spt-BR!2sbr!4v1637241714308!5m2!1spt-BR!2sbr" width="100%" height="450" style={{border:0}} allowFullScreen="" loading="lazy"></iframe>

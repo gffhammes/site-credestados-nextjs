@@ -36,50 +36,47 @@ function Navbar() {
   return (
     <>
       <nav className="navbar" id='navbar'>
-        <div className="navbar-container container">
-          <Link
-            passHref
-            href='/'
-            onClick={closeMobileMenu}       
-          >
-            <img src={'/images/logo.webp'} alt="Logo" className='navbar-logo'/>
-          </Link>
+        <div className="navbar-container container" >
+          <div onClick={closeMobileMenu}  className='navbar-logo' >            
+            <Link
+              passHref
+              href='/'                  
+            >
+              <img src={'/images/logo.webp'} alt="Logo" />
+            </Link>
+          </div>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
           <ul className={click && isMobile ? 'nav-menu active shadow-3' : 'nav-menu'}>
-            <li className='nav-item'>
+            <li className='nav-item' onClick={closeMobileMenu}>
               <Link
                 activeClassName='active'
                 href='/'
-                onClick={closeMobileMenu}
               >
                 <a className={`nav-link ${router.pathname == "/" ? "active" : ""}`} >Home</a>
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className='nav-item' onClick={closeMobileMenu}>
             <Link
                 activeClassName='active'
                 href='/emprestimo'
-                onClick={closeMobileMenu}
               >
                 <a className={`nav-link ${router.pathname == "/emprestimo" ? "active" : ""}`} >Empréstimo</a>
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className='nav-item' onClick={closeMobileMenu}>
             <Link
                 activeClassName='active'
                 href='/fgts'
-                onClick={closeMobileMenu}
               >
                 <a className={`nav-link ${router.pathname == "/fgts" ? "active" : ""}`} >FGTS</a>
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className='nav-item' onClick={closeMobileMenu}>
             <Link
                 activeClassName='active'
                 href='/auxilio-brasil'
-                onClick={closeMobileMenu}
               >
                 <a className={`nav-link ${router.pathname == "/auxilio-brasil" ? "active" : ""}`} >Auxílio Brasil</a>
               </Link>
