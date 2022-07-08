@@ -68,9 +68,9 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a target='_blank' href='tel:(47) 3268-4843' rel="noreferrer">
+                <a target='_blank' href='tel:(47) 9 9752-7024' rel="noreferrer">
                   <i className="fas fa-phone-alt"></i> 
-                  <span>(47) 3268-4843</span>
+                  <span>(47) 9 9752-7024</span>
                 </a>
               </li>
               <li>
