@@ -1,13 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import { Button } from '../Commons/Button';
-import { getWhatsappByRoute } from '../../utils/whatsappConfig';
-import { useRouter } from 'next/router';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 
 function EmprestimoHeader() {
-  const { pathname } = useRouter();
-  const whatsapp = getWhatsappByRoute(pathname);
+  const whatsapp = useWhatsApp();
 
   return (
     <section id='emprestimo-header'>

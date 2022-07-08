@@ -1,11 +1,9 @@
 import React from 'react';
-import { useRouter } from 'next/router';
-import { getWhatsappByRoute } from '../../utils/whatsappConfig';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 
 export const CardEmprestimo = ({ imgPath, text }) => {
-  const { pathname } = useRouter();
-  const whatsapp = getWhatsappByRoute(pathname);
+  const whatsapp = useWhatsApp();
 
   const urlWhatsApp = `https://wa.me/55${whatsapp}?text=${encodeURI(`Olá, gostaria de uma simulação de empréstimo para ${text.toLowerCase()}!`)}`;
 

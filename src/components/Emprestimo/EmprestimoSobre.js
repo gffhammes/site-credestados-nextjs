@@ -1,17 +1,15 @@
 import { React, useState, useEffect } from 'react';
-import { useWindowWidth } from '../../utils/hooks/useWindowWidth';
 import SectionTitle from '../Commons/SectionTitle';
 import Link from 'next/link';
 import { Button } from '../Commons/Button';
-import { getWhatsappByRoute } from '../../utils/whatsappConfig';
 import { useRouter } from 'next/router';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
+import { useWindowWidth } from '../../hooks/useWindowWidth';
 
 
 function EmprestimoSobre() {
   const windowWidth = useWindowWidth();
-  
-  const { pathname } = useRouter();
-  const whatsapp = getWhatsappByRoute(pathname);
+  const whatsapp = useWhatsApp();
 
   return (
     <section className='padding--default bg--light-grey' id='emprestimo-sobre'>

@@ -3,9 +3,10 @@ import React from 'react'
 import { Form, Formik } from 'formik';
 import Input from '../Commons/Input';
 import { Button } from '../Commons/Button';
+import {useWhatsApp} from '../../hooks/useWhatsApp'
 
 const AuxilioBrasilForm = () => {
-
+  const whatsapp = useWhatsApp();
   
   const validate = (values) => {
     const errors = {};
@@ -17,25 +18,17 @@ const AuxilioBrasilForm = () => {
     if (!values.phone) {
       errors.phone = 'Obrigatório';
     }
-
-  //  if (!values.aniversario) {
-  //   errors.aniversario = 'Obrigatório';
-  // } else {
-  //   if (!isValidDate(values.aniversario)) {
-  //     errors.aniversario = 'Data inválida';
-  //   }
-  // }
  
    return errors;
   }
 
-  const handleSubmit = (values, event) => {
-    // const aniversario = values.aniversario.toLocaleDateString('pt-br');
-    // const saldo = parseInt(values.saldo).toLocaleString('pt-br');
-    // const message = `Olá, gostaria de uma simulação para antecipação do FGTS! Meu saldo é de *R$ ${saldo}* e meu aniversário é no dia *${aniversario}*.`;
-    // const encodedMessage = encodeURIComponent(message);
-    // const link = `https://wa.me/55${whatsapp}?text=${encodedMessage}`;
-    // window.open(link, "_blank");
+  const handleSubmit = (values) => {
+    const name = values.name;
+    const phone = values.phone;
+    const message = `Olá, tenho interesse no *Empréstimo Auxílio Brasil!* Meu nome é ${name} e meu telefone é ${phone}.`; 
+    const encodedMessage = encodeURIComponent(message);
+    const link = `https://wa.me/55${whatsapp}?text=${encodedMessage}`;
+    window.open(link, "_blank");
   }
 
   return (
@@ -56,7 +49,7 @@ const AuxilioBrasilForm = () => {
               color='primary'
               required
             />
-            <Input.Input
+            <Input.PhoneInputField
               name='phone'
               id="phone"
               label="Telefone"

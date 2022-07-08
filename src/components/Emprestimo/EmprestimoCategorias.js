@@ -3,8 +3,7 @@ import SectionTitle from '../Commons/SectionTitle';
 import CardEmprestimo from './CardEmprestimo';
 import Link from 'next/link'
 import { Button } from '../Commons/Button';
-import { useRouter } from 'next/router';
-import { getWhatsappByRoute } from '../../utils/whatsappConfig';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 const cards = [
   {
@@ -34,8 +33,7 @@ const cards = [
 ];
 
 function EmprestimoCategorias() {
-  const { pathname } = useRouter();
-  const whatsapp = getWhatsappByRoute(pathname);
+  const whatsapp = useWhatsApp();
 
   return (
     <section className='padding--default' id='emprestimo-categorias'>

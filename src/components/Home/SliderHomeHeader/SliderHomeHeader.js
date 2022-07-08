@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SliderContent from './SliderContent';
 import Arrow from './Arrow';
-import { useWindowWidth } from '../../../utils/hooks/useWindowWidth';
+import { useWindowWidth } from '../../../hooks/useWindowWidth';
 
 /** 
 * @function SliderHomeHeader

@@ -3,8 +3,7 @@ import { Formik } from 'formik';
 import DatePicker from '../Commons/DatePicker';
 import Input from '../Commons/Input'
 import { Button } from '../Commons/Button';
-import { getWhatsappByRoute } from '../../utils/whatsappConfig';
-import { useRouter } from 'next/router';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 const isValidDate = function(date) {
   return (!isNaN(date.getTime()))
@@ -13,8 +12,7 @@ const isValidDate = function(date) {
 export default function Simulador() {
   const [saldoFgts, setSaldoFgts] = useState('');
   const [aniversario, setAniversario] = useState('');
-  const { pathname } = useRouter();
-  const whatsapp = getWhatsappByRoute(pathname);
+  const whatsapp = useWhatsApp();
   const minValue = 400;
 
   const validate = (values) => {

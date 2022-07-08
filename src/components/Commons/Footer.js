@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link'
-import { getWhatsappByRoute } from '../../utils/whatsappConfig';
 import { useRouter } from 'next/router';
 import { useScroll } from '../../hooks/useScroll';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 function Footer() {
   const { pathname } = useRouter();
-  const whatsapp = getWhatsappByRoute(pathname);
+  const whatsapp = useWhatsApp();
   const scroll = useScroll()
 
   const isScrollAtBottom = typeof window !== 'undefined' && window?.innerHeight + scroll >= document?.body.offsetHeight;

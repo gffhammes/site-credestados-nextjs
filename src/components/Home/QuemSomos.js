@@ -3,12 +3,10 @@ import SectionTitle from '../Commons/SectionTitle';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '../Commons/Button';
-import { getWhatsappByRoute } from '../../utils/whatsappConfig';
-import { useRouter } from 'next/router';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 function QuemSomos() {
-  const { pathname } = useRouter();
-  const whatsapp = getWhatsappByRoute(pathname);
+  const whatsapp = useWhatsApp();
 
   return (
     <section className='padding--default' id='quem-somos'>

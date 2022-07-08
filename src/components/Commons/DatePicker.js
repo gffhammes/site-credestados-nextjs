@@ -6,7 +6,7 @@ import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import DesktopDatePicker from '@mui/lab/DesktopDatePicker';
 import MobileDatePicker from '@mui/lab/MobileDatePicker';
 import { useField } from 'formik';
-import { useWindowWidth } from '../../utils/hooks/useWindowWidth';
+import { useWindowWidth } from '../../hooks/useWindowWidth';
 
 export default function DatePicker(props) {
   const [field, meta, helpers] = useField({ name: props.name });

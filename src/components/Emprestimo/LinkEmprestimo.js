@@ -1,10 +1,8 @@
 import React from 'react';
-import { getWhatsappByRoute } from '../../utils/whatsappConfig';
-import { useRouter } from 'next/router';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 export const LinkEmprestimo = ({ text }) => {
-  const { pathname } = useRouter();
-  const whatsapp = getWhatsappByRoute(pathname);
+  const whatsapp = useWhatsApp();
 
   function formatLink() {
     const rawText = `Olá! Gostaria de uma simulação de empréstimo para ${text}!`;    

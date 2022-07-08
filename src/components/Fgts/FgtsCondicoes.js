@@ -2,12 +2,10 @@ import React, {useState} from 'react';
 import SectionTitle from '../Commons/SectionTitle';
 import Link from 'next/link';
 import { Button } from '../Commons/Button';
-import { getWhatsappByRoute } from '../../utils/whatsappConfig';
-import { useRouter } from 'next/router';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 function FgtsCondicoes() {
-  const { pathname } = useRouter();
-  const whatsapp = getWhatsappByRoute(pathname);
+  const whatsapp = useWhatsApp();
 
   const Condicoes = ({
     text,
