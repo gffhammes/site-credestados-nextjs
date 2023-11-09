@@ -9,7 +9,7 @@ export const getWhatsappByRoute = (route) => {
       break;
 
     default:
-      whatsapp = '47997527024';
+      whatsapp = '48991725508';
   }
 
   return whatsapp;

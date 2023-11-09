@@ -68,16 +68,18 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a target='_blank' href='tel:(47) 9 9752-7024' rel="noreferrer">
+                <a target='_blank' href='tel:(48) 9 9172-5508' rel="noreferrer">
                   <i className="fas fa-phone-alt"></i> 
-                  <span>(47) 9 9752-7024</span>
+                  <span>(48) 9 9172-5508</span>
+
+
                 </a>
               </li>
               <li>
                 <a target='_blank' href='https://www.google.com/maps?ll=-26.981552,-48.640041&z=16&t=m&hl=pt-BR&gl=BR&mapclient=embed&cid=6349246038411362719' rel="noreferrer">
                   <i className="fas fa-map-marker-alt"></i>
                   <span>
-                    Av. do Estado Dalmo Vieira, 2985<br/>
+                    Av. Atlântica, 1530 - Sala 05<br/>
                     Centro, Balneário Camboriú - SC
                   </span>   
                 </a>
