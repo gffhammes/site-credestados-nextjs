@@ -3,7 +3,7 @@ import { useWindowWidth } from './useWindowWidth';
 
 export const useIsMobile = () => {
   const windowWidth = useWindowWidth();
-  const isMobile = windowWidth < 768;
+  const isMobile = windowWidth < 1000;
 
   const isMobileMemo = useMemo(() => isMobile, [isMobile]);
 

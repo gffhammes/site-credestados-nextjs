@@ -58,15 +58,15 @@ function Navbar() {
                 <a className={`nav-link ${router.pathname == "/fgts" ? "active" : ""}`} >FGTS</a>
               </Link>
             </li>
-            <li className='nav-item' onClick={closeMobileMenu}>
+            {/* <li className='nav-item' onClick={closeMobileMenu}>
             <Link
                 activeClassName='active'
                 href='/auxilio-brasil'
               >
                 <a className={`nav-link ${router.pathname == "/auxilio-brasil" ? "active" : ""}`} >Auxílio Brasil</a>
               </Link>
-            </li>
-            {/* <li className='nav-item'>
+            </li> */}
+            <li className='nav-item'>
               <a target='_blank' href="https://docs.google.com/forms/d/e/1FAIpQLScBeveHxeglbvr38am6FIliXA5IYSQ2Kp4JlXzr6AdWBFrYHw/viewform" className="nav-link" rel="noreferrer">
                 Trabalhe conosco
               </a>
@@ -75,7 +75,7 @@ function Navbar() {
               <a target='_blank' href="https://credestados.stormfin.com.br/" className="nav-link" rel="noreferrer">
                 Colaborador
               </a>
-            </li> */}
+            </li>
             <Button
               variant='outlined'
               sx={{ marginLeft: isMobile ? '0' : '2rem' }}
