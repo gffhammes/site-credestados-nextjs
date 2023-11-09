@@ -24,7 +24,6 @@ const slides = [
 
 const SliderContent = ({
   translate,
-  transition,
   width
 }) => {
   return (

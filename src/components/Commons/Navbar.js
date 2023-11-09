@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, {useEffect, useState} from 'react';
+import React, { useState} from 'react';
 import { useRouter } from "next/router";
 import { Button } from './Button';
 import { useWhatsApp } from '../../hooks/useWhatsApp';
@@ -9,7 +9,6 @@ import { useIsMobile } from '../../hooks/useIsMobile';
 function Navbar() {
   const [click, setClick] = useState(false);
   const router = useRouter();
-  const { pathname } = router;
   const whatsapp = useWhatsApp();
   const isMobile = useIsMobile();
   const scroll = useScroll()

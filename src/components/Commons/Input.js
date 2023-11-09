@@ -1,18 +1,8 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback,  } from 'react';
 import {
 	TextField,
-	FormHelperText,
-	Theme,
-	TextFieldProps,
-	FormControl,
-	InputLabel,
-	OutlinedInput,
-	InputAdornment,
-	IconButton,
 } from '@mui/material';
-import { SxProps } from '@mui/system';
 import { useField } from 'formik';
-import { Visibility, VisibilityOff } from '@mui/icons-material';
 import NumberFormat from 'react-number-format';
 
 
@@ -68,8 +58,7 @@ const PhoneInput = React.forwardRef(
 );
 
 const FinancialInputField = (props) => {
-  const [field, meta, helpers] = useField({ name: props.name });
-  const { helperText } = props;
+  const [field, meta, ] = useField({ name: props.name });
 
 	const getHelperText = useCallback(() => {
 		if (Boolean(meta.touched) && Boolean(meta.error)) {
@@ -100,8 +89,7 @@ const FinancialInputField = (props) => {
 }
 
 const PhoneInputField = (props) => {
-  const [field, meta, helpers] = useField({ name: props.name });
-  const { helperText } = props;
+  const [field, meta, ] = useField({ name: props.name });
 
 	const getHelperText = useCallback(() => {
 		if (Boolean(meta.touched) && Boolean(meta.error)) {
@@ -132,8 +120,7 @@ const PhoneInputField = (props) => {
 }
 
 const Input= (props) => {
-  const [field, meta, helpers] = useField({ name: props.name });
-  const { helperText } = props;
+  const [field, meta, ] = useField({ name: props.name });
 
 	const getHelperText = useCallback(() => {
 		if (Boolean(meta.touched) && Boolean(meta.error)) {
@@ -161,8 +148,10 @@ const Input= (props) => {
 }
 
 
-export default {
+const InputExport = {
 	FinancialInputField: React.memo(FinancialInputField),
   PhoneInputField: React.memo(PhoneInputField),
   Input: React.memo(Input),
 };
+
+export default  InputExport

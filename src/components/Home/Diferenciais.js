@@ -1,7 +1,6 @@
 import React from 'react';
 import SectionTitle from '../Commons/SectionTitle';
 import IconText from '../Commons/IconText'
-import Link from 'next/link';
 import { Button } from '../Commons/Button';
 import { useWhatsApp } from '../../hooks/useWhatsApp';
 

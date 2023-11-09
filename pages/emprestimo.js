@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import EmprestimoHeader from '../src/components/Emprestimo/EmprestimoHeader'
 import EmprestimoSobre from '../src/components/Emprestimo/EmprestimoSobre'
 import EmprestimoCategorias from '../src/components/Emprestimo/EmprestimoCategorias'

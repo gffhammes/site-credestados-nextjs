@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { Button } from '../Commons/Button';
 import { useWhatsApp } from '../../hooks/useWhatsApp';
 

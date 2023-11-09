@@ -13,7 +13,7 @@ const Arrow = ({
       }}
       onClick={handleClick}
     >
-      <img src={direction === 'right' ? '/images/arrow-right.svg' : '/images/arrow-left.svg'} />
+      <img src={direction === 'right' ? '/images/arrow-right.svg' : '/images/arrow-left.svg' } alt='seta' />
     </div>
   )
 }

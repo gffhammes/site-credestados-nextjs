@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { SliderHomeHeader } from '../components/Home/SliderHomeHeader/SliderHomeHeader'
 import QuemSomos from '../components/Home/QuemSomos'
 import Diferenciais from '../components/Home/Diferenciais'

@@ -1,8 +1,5 @@
-import React, {useState, Suspense} from 'react';
+import React from 'react';
 import SectionTitle from '../Commons/SectionTitle';
-// import './FgtsSimulador.scss';
-import { CircularProgress } from '@mui/material';
-import loadable, { lazy } from '@loadable/component'
 import Simulador from './Simulador'
 
 function FgtsSimulador() {

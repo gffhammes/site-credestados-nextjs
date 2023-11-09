@@ -9,8 +9,7 @@ import { useField } from 'formik';
 import { useWindowWidth } from '../../hooks/useWindowWidth';
 
 export default function DatePicker(props) {
-  const [field, meta, helpers] = useField({ name: props.name });
-  const { helperText } = props; 
+  const [field, meta, ] = useField({ name: props.name });
   const windowWidth = useWindowWidth();
  
 	const getHelperText = React.useCallback(() => {

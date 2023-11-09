@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import FgtsHeader from '../src/components/Fgts/FgtsHeader'
 import FgtsSimulador from '../src/components/Fgts/FgtsSimulador'
 import FgtsCondicoes from '../src/components/Fgts/FgtsCondicoes'

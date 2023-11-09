@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Formik } from 'formik';
 import DatePicker from '../Commons/DatePicker';
 import Input from '../Commons/Input'
@@ -10,8 +10,6 @@ const isValidDate = function(date) {
 }
 
 export default function Simulador() {
-  const [saldoFgts, setSaldoFgts] = useState('');
-  const [aniversario, setAniversario] = useState('');
   const whatsapp = useWhatsApp();
   const minValue = 400;
 

@@ -1,8 +1,6 @@
-import { React, useState, useEffect } from 'react';
+import { React } from 'react';
 import SectionTitle from '../Commons/SectionTitle';
-import Link from 'next/link';
 import { Button } from '../Commons/Button';
-import { useRouter } from 'next/router';
 import { useWhatsApp } from '../../hooks/useWhatsApp';
 import { useWindowWidth } from '../../hooks/useWindowWidth';
 

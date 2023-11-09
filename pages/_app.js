@@ -1,5 +1,4 @@
 import { createTheme, ThemeProvider } from '@mui/material';
-import Head from 'next/head'
 import NProgress from "nprogress"
 import '../styles/globals.scss'
 import Footer from '../src/components/Commons/Footer'

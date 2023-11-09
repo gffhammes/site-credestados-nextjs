@@ -1,6 +1,4 @@
-import React, {useState} from 'react';
 import SectionTitle from '../Commons/SectionTitle';
-import Link from 'next/link';
 import { Button } from '../Commons/Button';
 import { useWhatsApp } from '../../hooks/useWhatsApp';
 

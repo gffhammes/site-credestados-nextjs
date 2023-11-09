@@ -1,5 +1,4 @@
 import React from 'react'
-import { useRouter } from "next/router";
 import { Button as MuiButton, Link as MuiLink } from '@mui/material';
 import Link from 'next/link';
 import { useIsMobile } from '../../hooks/useIsMobile'
