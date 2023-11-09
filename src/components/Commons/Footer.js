@@ -1,11 +1,10 @@
 import React from 'react';
 import Link from 'next/link'
-import { useRouter } from 'next/router';
 import { useScroll } from '../../hooks/useScroll';
 import { useWhatsApp } from '../../hooks/useWhatsApp';
+import {  Stack } from '@mui/material';
 
 function Footer() {
-  const { pathname } = useRouter();
   const whatsapp = useWhatsApp();
   const scroll = useScroll()
 
@@ -90,8 +89,11 @@ function Footer() {
       </div>
       <div className="copyright">
         <div className="container">
-          <span>© Credestados {new Date().getFullYear()}</span>
+         <Stack width='100%' direction='row' alignItems='center' justifyContent='space-between'>
+          <span>© {new Date().getFullYear()} | Fontanella Servicos LTDA | 37.111.025/0001-72</span>
+          
           <a href='https://guilhermehammes.com.br/' target='_blank' rel="noreferrer">Desenvolvido por <img src={'/images/logo-gh.webp'} alt="" /></a>
+         </Stack>
         </div>
       </div>
     </footer>
