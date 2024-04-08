@@ -13,6 +13,7 @@ function FgtsSimulador() {
             Informe seu saldo e o seu aniversário e conheça as condições.
           </p>
         </div>
+        
         <Simulador />
       </div>     
     </section>

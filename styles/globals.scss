@@ -1346,7 +1346,7 @@ footer {
 @media screen and (min-width: 400px) and (max-width: 675px) {
   #fgts-simulador {
     .container {
-        .card-simulacao-fgts {
+      .card-simulacao-fgts {
           grid-area: c;
 
       }
@@ -1361,6 +1361,7 @@ footer {
       grid-template-areas: 
       "a b"
       "c b";
+      grid-template-columns: max-content 1fr;
 
         .title-container {
           align-self: flex-end;

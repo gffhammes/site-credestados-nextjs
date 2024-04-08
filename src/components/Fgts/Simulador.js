@@ -4,6 +4,7 @@ import DatePicker from '../Commons/DatePicker';
 import Input from '../Commons/Input'
 import { Button } from '../Commons/Button';
 import { useWhatsApp } from '../../hooks/useWhatsApp';
+import { Checkbox, FormControl, FormControlLabel, FormHelperText } from '@mui/material';
 
 const isValidDate = function(date) {
   return (!isNaN(date.getTime()))
@@ -31,6 +32,11 @@ export default function Simulador() {
       errors.aniversario = 'Data inválida';
     }
   }
+
+
+  if(!values.auth) {
+    errors.auth = 'Obrigatório'
+  }
  
    return errors;
   }
@@ -53,12 +59,12 @@ export default function Simulador() {
       </div>
       <div className="card-body">
         <Formik
-          initialValues={{ saldo: '', aniversario: null }}
+          initialValues={{ saldo: '', aniversario: null, auth: false }}
           validate={validate}
           onSubmit={handleSubmit}
         >
           {
-            ({ setFieldValue, handleSubmit, values }) => (
+            ({ setFieldValue, handleSubmit, values ,errors}) => (
               <form onSubmit={handleSubmit} noValidate style={{ display: "flex", flexDirection: "column", gap: '1rem', marginTop: '1.5rem' }}>                  
                 <Input.FinancialInputField
                   name='saldo'
@@ -81,6 +87,27 @@ export default function Simulador() {
                   }}
                   required
                 />
+
+                <FormControl
+                  error={errors.auth}
+                >
+                  <FormControlLabel    
+                        name='auth'
+                        color='default'
+                    label="Ao informar meus dados, eu concordo que a CredEstados entre em contato comigo."
+                    onChange={(value,checked) => {
+                      setFieldValue('auth', checked);
+                    }}
+                    value={values.auth}
+                    control={
+                      <Checkbox
+                      />}
+                      sx={{color: '#444'}}
+                  />
+
+                  {errors.auth && <FormHelperText color='error'>{errors.auth}</FormHelperText>}
+                </FormControl>
+
                 
                 <Button variant="outlined" color='primary' type='submit' fullWidth >Simular</Button>
               </form>
