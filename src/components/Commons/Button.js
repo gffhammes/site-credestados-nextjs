@@ -1,6 +1,6 @@
 import React from 'react'
-import { Button as MuiButton, Link as MuiLink } from '@mui/material';
-import Link from 'next/link';
+import { Button as MuiButton, Link as MuiLink } from '@mui/material'
+import Link from 'next/link'
 import { useIsMobile } from '../../hooks/useIsMobile'
 
 export const Button = (props) => {
@@ -14,19 +14,21 @@ export const Button = (props) => {
     fullWidth,
     target,
     ...rest
-  } = props;
+  } = props
 
-  const isMobile = useIsMobile();
+  const isMobile = useIsMobile()
 
-  const buttonStyle = fullWidth || isMobile
-    ? {
-      ...sx,
-      height: 'fit-content',
-    } : {
-      ...sx,
-      width: 'fit-content',
-      height: 'fit-content',
-    }
+  const buttonStyle =
+    fullWidth || isMobile
+      ? {
+          ...sx,
+          height: 'fit-content',
+        }
+      : {
+          ...sx,
+          width: 'fit-content',
+          height: 'fit-content',
+        }
 
   const ButtonComponent = () => {
     return (
@@ -46,11 +48,13 @@ export const Button = (props) => {
     )
   }
 
-  return (
-    href && target !== '_blank'
-    ? <Link href={href} passHref>
-        <a style={{ textDecoration: 'none' }}><ButtonComponent /></a>
-      </Link>
-    : <ButtonComponent />
+  return href && target !== '_blank' ? (
+    <Link href={href} passHref>
+      <a style={{ textDecoration: 'none' }}>
+        <ButtonComponent />
+      </a>
+    </Link>
+  ) : (
+    <ButtonComponent />
   )
 }

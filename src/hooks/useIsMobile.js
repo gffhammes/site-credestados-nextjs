@@ -1,11 +1,11 @@
 import React, { useMemo } from 'react'
-import { useWindowWidth } from './useWindowWidth';
+import { useWindowWidth } from './useWindowWidth'
 
 export const useIsMobile = () => {
-  const windowWidth = useWindowWidth();
-  const isMobile = windowWidth < 1000;
+  const windowWidth = useWindowWidth()
+  const isMobile = windowWidth < 1000
 
-  const isMobileMemo = useMemo(() => isMobile, [isMobile]);
+  const isMobileMemo = useMemo(() => isMobile, [isMobile])
 
-  return isMobileMemo;
+  return isMobileMemo
 }

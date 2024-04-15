@@ -1,8 +1,8 @@
-import React from 'react';
-import SectionTitle from '../Commons/SectionTitle';
-import CardEmprestimo from './CardEmprestimo';
-import { Button } from '../Commons/Button';
-import { useWhatsApp } from '../../hooks/useWhatsApp';
+import React from 'react'
+import SectionTitle from '../Commons/SectionTitle'
+import CardEmprestimo from './CardEmprestimo'
+import { Button } from '../Commons/Button'
+import { useWhatsApp } from '../../hooks/useWhatsApp'
 
 const cards = [
   {
@@ -29,29 +29,39 @@ const cards = [
     imgPath: '/images/emprestimo-06.webp',
     text: 'PORTABILIDADE DE CRÉDITO',
   },
-];
+]
 
 function EmprestimoCategorias() {
-  const whatsapp = useWhatsApp();
+  const whatsapp = useWhatsApp()
 
   return (
-    <section className='padding--default' id='emprestimo-categorias'>
+    <section className="padding--default" id="emprestimo-categorias">
       <div className="container">
-        <SectionTitle title='Temos a solução certa para você' subTitle='CATEGORIAS' alignment='align--left'/>
+        <SectionTitle
+          title="Temos a solução certa para você"
+          subTitle="CATEGORIAS"
+          alignment="align--left"
+        />
         <div className="content">
           {cards.map((card, index) => {
-            return <CardEmprestimo imgPath={card.imgPath} text={card.text} key={index} />
+            return (
+              <CardEmprestimo
+                imgPath={card.imgPath}
+                text={card.text}
+                key={index}
+              />
+            )
           })}
         </div>
         <Button
-          variant='contained'
+          variant="contained"
           href={`https://wa.me/55${whatsapp}`}
-          target='_blank'
-          startIcon={<i className='fab fa-whatsapp' />}
+          target="_blank"
+          startIcon={<i className="fab fa-whatsapp" />}
         >
           Simular
         </Button>
-      </div>   
+      </div>
     </section>
   )
 }

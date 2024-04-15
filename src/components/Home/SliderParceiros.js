@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import Slider from "react-slick";
+import React, { Component } from 'react'
+import Slider from 'react-slick'
 
 export default class SliderParceiros extends Component {
   render() {
@@ -15,20 +15,20 @@ export default class SliderParceiros extends Component {
         {
           breakpoint: 875,
           settings: {
-              slidesToShow: 3,
-          }
+            slidesToShow: 3,
+          },
         },
 
         {
-            breakpoint: 575,
-            settings: {
-                slidesToShow: 2,
-            }
+          breakpoint: 575,
+          settings: {
+            slidesToShow: 2,
+          },
         },
-  ]
-    };
+      ],
+    }
     return (
-      <div className='slider-parceiros'>
+      <div className="slider-parceiros">
         <Slider {...settings}>
           <div>
             <img src={'/images/parceiro-01.webp'} alt="Parceiro" />
@@ -53,6 +53,6 @@ export default class SliderParceiros extends Component {
           </div>
         </Slider>
       </div>
-    );
+    )
   }
 }

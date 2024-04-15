@@ -10,7 +10,7 @@ export default function Index() {
       <Head>
         <title>Empréstimo Consignado | CredEstados</title>
       </Head>
-      <main className='page__emprestimo'>
+      <main className="page__emprestimo">
         <EmprestimoHeader />
         <EmprestimoSobre />
         {/* <img

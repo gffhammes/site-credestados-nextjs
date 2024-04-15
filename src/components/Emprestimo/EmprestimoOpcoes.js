@@ -1,25 +1,28 @@
-import React from 'react';
-import SectionTitle from '../Commons/SectionTitle';
-import LinkEmprestimo from './LinkEmprestimo';
+import React from 'react'
+import SectionTitle from '../Commons/SectionTitle'
+import LinkEmprestimo from './LinkEmprestimo'
 // import './EmprestimoOpcoes.scss';
-
 
 function EmprestimoOpcoes() {
   return (
-    <section className='padding--default bg--light-grey' id='emprestimo-opcoes'>
+    <section className="padding--default bg--light-grey" id="emprestimo-opcoes">
       <div className="container">
-        <SectionTitle title='Selecione o que você deseja fazer com seu empréstimo!' subTitle='OPÇÕES' alignment='align--center'/>
+        <SectionTitle
+          title="Selecione o que você deseja fazer com seu empréstimo!"
+          subTitle="OPÇÕES"
+          alignment="align--center"
+        />
         <div className="content">
-          <LinkEmprestimo text='comprar um apartamento'/>
-          <LinkEmprestimo text='pagar minhas dívidas'/>
-          <LinkEmprestimo text='reformar minha casa'/>
-          <LinkEmprestimo text='comprar um carro'/>
-          <LinkEmprestimo text='viajar'/>
-          <LinkEmprestimo text='complementar a renda'/>
-          <LinkEmprestimo text='abrir meu próprio negócio'/>
-          <LinkEmprestimo text='emergência de saúde'/>
+          <LinkEmprestimo text="comprar um apartamento" />
+          <LinkEmprestimo text="pagar minhas dívidas" />
+          <LinkEmprestimo text="reformar minha casa" />
+          <LinkEmprestimo text="comprar um carro" />
+          <LinkEmprestimo text="viajar" />
+          <LinkEmprestimo text="complementar a renda" />
+          <LinkEmprestimo text="abrir meu próprio negócio" />
+          <LinkEmprestimo text="emergência de saúde" />
         </div>
-      </div>   
+      </div>
     </section>
   )
 }

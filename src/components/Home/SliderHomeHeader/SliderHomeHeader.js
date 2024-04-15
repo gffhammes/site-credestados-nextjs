@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import SliderContent from './SliderContent';
-import Arrow from './Arrow';
-import { useWindowWidth } from '../../../hooks/useWindowWidth';
+import React, { useState } from 'react'
+import SliderContent from './SliderContent'
+import Arrow from './Arrow'
+import { useWindowWidth } from '../../../hooks/useWindowWidth'
 
-/** 
-* @function SliderHomeHeader
-*/
+/**
+ * @function SliderHomeHeader
+ */
 
 export const SliderHomeHeader = () => {
-  const windowWidth = useWindowWidth();
+  const windowWidth = useWindowWidth()
 
   const [state, setState] = useState({
     activeIndex: 0,
     translate: 0,
     transition: 0.45,
-  });
+  })
 
   const nextSlide = () => {
     if (state.activeIndex === 2) {
@@ -22,7 +22,7 @@ export const SliderHomeHeader = () => {
         ...state,
         translate: 0,
         activeIndex: 0,
-      });
+      })
     } else {
       setState({
         ...state,
@@ -38,7 +38,7 @@ export const SliderHomeHeader = () => {
         ...state,
         translate: 2 * windowWidth,
         activeIndex: 2,
-      });
+      })
     } else {
       setState({
         ...state,
@@ -49,14 +49,14 @@ export const SliderHomeHeader = () => {
   }
 
   return (
-    <div className='slider-container'>
-      <Arrow direction='left' handleClick={prevSlide}/>
+    <div className="slider-container">
+      <Arrow direction="left" handleClick={prevSlide} />
       <SliderContent
         translate={state.translate}
         transition={state.transition}
-        width={(windowWidth * 3)}
+        width={windowWidth * 3}
       />
-      <Arrow direction='right' handleClick={nextSlide}/>
+      <Arrow direction="right" handleClick={nextSlide} />
     </div>
   )
 }

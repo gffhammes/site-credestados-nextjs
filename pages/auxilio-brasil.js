@@ -6,7 +6,7 @@ const bulletPoints = [
   'Garanta já o seu consignado com as <strong>melhores taxas</strong> do mercado',
   'Valor liberado em sua conta',
   'Parcelas descontadas diretamente do seu beneficio, sem necessidade de <strong>nenhum pagamento de boleto</strong>',
-  'Contratação digital, <strong>100% segura</strong>'
+  'Contratação digital, <strong>100% segura</strong>',
 ]
 
 export default function AuxilioBrasil() {
@@ -16,7 +16,7 @@ export default function AuxilioBrasil() {
         <title>Auxílio Brasil | CredEstados</title>
       </Head>
       <main
-        className='page__auxilio-brasil'
+        className="page__auxilio-brasil"
         style={{
           backgroundImage: 'url(/images/auxilio-brasil.webp)',
           backgroundRepeat: 'no-repeat',
@@ -30,19 +30,51 @@ export default function AuxilioBrasil() {
             height: '100%',
             top: 0,
             width: '100%',
-            background: 'rgba(0, 0, 0, 0.8)'
+            background: 'rgba(0, 0, 0, 0.8)',
           }}
         />
-        <Container sx={{ minHeight: '90vh', display: 'flex', position: 'relative', px: '2rem' }}>
-          <Stack direction={{ xs: 'column', md: 'row' }} sx={{ m: 'auto', py: 10 }} alignItems='center' spacing={{ xs: 5, lg: 15 }}>            
+        <Container
+          sx={{
+            minHeight: '90vh',
+            display: 'flex',
+            position: 'relative',
+            px: '2rem',
+          }}
+        >
+          <Stack
+            direction={{ xs: 'column', md: 'row' }}
+            sx={{ m: 'auto', py: 10 }}
+            alignItems="center"
+            spacing={{ xs: 5, lg: 15 }}
+          >
             <Stack spacing={3} sx={{ color: 'white' }}>
-              <Typography  sx={{ maxWidth: { xs: '35ch', md: '30ch' } }} variant='h1' fontSize={{ xs: '1.5rem', md: '2rem'}} fontWeight={700}>Empréstimo Consignado <strong style={{ color: 'var(--primary)', fontSize: '4rem' }}>AUXÍLIO BRASIL</strong></Typography>
-              <Stack sx={{ maxWidth: '60ch'}} spacing={2}>   
-                {bulletPoints.map(item => {
+              <Typography
+                sx={{ maxWidth: { xs: '35ch', md: '30ch' } }}
+                variant="h1"
+                fontSize={{ xs: '1.5rem', md: '2rem' }}
+                fontWeight={700}
+              >
+                Empréstimo Consignado{' '}
+                <strong
+                  style={{
+                    color: 'var(--primary)',
+                    fontSize: '4rem',
+                  }}
+                >
+                  AUXÍLIO BRASIL
+                </strong>
+              </Typography>
+              <Stack sx={{ maxWidth: '60ch' }} spacing={2}>
+                {bulletPoints.map((item) => {
                   return (
-                    <Stack direction='row' key={item} spacing={1}>
+                    <Stack direction="row" key={item} spacing={1}>
                       <Typography fontSize={18}>✅</Typography>
-                      <Typography fontSize={18} dangerouslySetInnerHTML={{ __html: item }} />
+                      <Typography
+                        fontSize={18}
+                        dangerouslySetInnerHTML={{
+                          __html: item,
+                        }}
+                      />
                     </Stack>
                   )
                 })}
