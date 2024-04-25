@@ -5,7 +5,7 @@ export default function Index() {
   return (
     <>
       <Head>
-        <title>Termos de Uso | CredEstados</title>
+        <title>Política de Privacidade | CredEstados</title>
       </Head>
       <main>
         <Stack gap={8} sx={{ py: 8 }}>
