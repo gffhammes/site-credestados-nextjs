@@ -133,7 +133,8 @@ function Footer() {
         <div className="container">
           <Stack
             width="100%"
-            direction="row"
+            direction={{ xs: 'column', md: 'row' }}
+            gap={2}
             alignItems="center"
             justifyContent="space-between"
             sx={{ fontSize: 12 }}
@@ -145,6 +146,12 @@ function Footer() {
 
             <Link href="/termos-de-uso">
               <a style={{ textDecoration: 'underline' }}>Termos de Uso</a>
+            </Link>
+
+            <Link href="/politica-de-privacidade">
+              <a style={{ textDecoration: 'underline' }}>
+                Política de Privacidade
+              </a>
             </Link>
 
             <a
