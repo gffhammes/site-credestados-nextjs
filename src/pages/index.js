@@ -10,12 +10,12 @@ export default function Index() {
       <Head>
         <title>CredEstados</title>
       </Head>
-      <main className='page__home'>
-        <SliderHomeHeader/>
+      <main className="page__home">
+        <SliderHomeHeader />
         <QuemSomos />
         <Diferenciais />
-        <Parceiros/>
-    </main>
+        <Parceiros />
+      </main>
     </>
   )
 }

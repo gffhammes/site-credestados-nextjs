@@ -1,14 +1,14 @@
 export const getWhatsappByRoute = (route) => {
-  let whatsapp;
+  let whatsapp
 
   switch (route) {
     case '/fgts':
-      whatsapp = '4791515234';
-      break;
+      whatsapp = '4791515234'
+      break
 
     default:
-      whatsapp = '48991725508';
+      whatsapp = '48991725508'
   }
 
-  return whatsapp;
+  return whatsapp
 }

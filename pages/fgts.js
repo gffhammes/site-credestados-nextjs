@@ -11,7 +11,7 @@ export default function Index() {
       <Head>
         <title>Saque FGTS | CredEstados</title>
       </Head>
-      <main id='page__fgts'>
+      <main id="page__fgts">
         <FgtsHeader />
         <FgtsSimulador />
         {/* <img
@@ -27,7 +27,7 @@ export default function Index() {
         /> */}
         <FgtsVantagens />
         <FgtsFAQ />
-    </main>
+      </main>
     </>
   )
 }
