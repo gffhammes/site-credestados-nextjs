@@ -15,7 +15,7 @@ function FgtsVantagens() {
     },
     {
       iconPath: '/images/icone-02.webp',
-      title: 'Contrate a partir de R$ 300,00',
+      title: 'Contrate a partir de R$50,00',
       text: 'Fácil contratação e pagamento rápido na conta, tudo digital.',
     },
     {
