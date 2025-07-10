@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }) {
   }, [])
 
   useEffect(() => {
-    TagManager.initialize({ gtmId: 'GTM-PVLS9CM' })
+    TagManager.initialize({ gtmId: 'GTM-T7H5GLR6' })
   }, [])
 
   return (
