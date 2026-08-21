@@ -2,6 +2,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+This project now includes a compatibility shim so it can start on Node.js 26. If you use `nvm`, switch to the pinned version before installing dependencies or starting the app:
+
+```bash
+nvm use
+yarn install
+yarn dev
+```
+
 First, run the development server:
 
 ```bash

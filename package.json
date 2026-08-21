@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 9000",
-    "build": "next build",
-    "start": "next start",
+    "dev": "NODE_OPTIONS='--require ./next-preload.js' node ./next-compat.js dev -p 9000",
+    "build": "NODE_OPTIONS='--require ./next-preload.js' node ./next-compat.js build",
+    "start": "NODE_OPTIONS='--require ./next-preload.js' node ./next-compat.js start",
     "analyze": "ANALYZE=true yarn build",
     "lint": "next lint"
   },
