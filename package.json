@@ -2,9 +2,6 @@
   "name": "next-credestados",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": "24.x"
-  },
   "scripts": {
     "dev": "NODE_OPTIONS='--require ./next-preload.js' node ./next-compat.js dev -p 9000",
     "build": "NODE_OPTIONS='--require ./next-preload.js' node ./next-compat.js build",

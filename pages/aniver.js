@@ -5,7 +5,7 @@ const CONNECTIONS = [
 ]
 
 const DEFAULT_MESSAGE =
-  '(RCS) Olá! Quero verificar o valor disponível no meu CLT.'
+  '(RCS) Oi! Sou aniversariante e quero antecipar meu FGTS.'
 const ROTATION_INTERVAL_SECONDS = 15
 
 export async function getServerSideProps({ query, res }) {
@@ -33,6 +33,6 @@ export async function getServerSideProps({ query, res }) {
   }
 }
 
-export default function ConsultarCLT() {
+export default function Aniver() {
   return null
 }
